@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69d1566e-5120-4149-a61a-e49b8f6bb6e6" name="Changes" comment="" />
+    <list default="true" id="69d1566e-5120-4149-a61a-e49b8f6bb6e6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sistemaDeUsuarios.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaDeUsuarios/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaDeUsuarios/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaDeUsuarios/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaDeUsuarios/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaDeUsuarios/wsgi.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730604414228</updated>
-      <workItem from="1730604450679" duration="10000" />
+      <workItem from="1730604450679" duration="216000" />
     </task>
     <servers />
   </component>
