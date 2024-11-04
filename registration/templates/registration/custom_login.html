@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-4">
+        <h1>Iniciar Sesión</h1>
+        {% if error %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{ error }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Usuario</label>
+                <input type="text" name="username" class="form-control" id="exampleInputEmail1"
+                       aria-describedby="emailHelp">
+            </div>
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">Password</label>
+                </div>
+                <div class="col-auto">
+                    <input type="password" name="password" id="inputPassword6" class="form-control"
+                           aria-describedby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+            <span id="passwordHelpInline" class="form-text">
+                Must be 8-20 characters long.
+            </span>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <button class="btn btn-outline-success" type="Iniciar Sesion">Iniciar Sesión</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

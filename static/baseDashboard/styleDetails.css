@@ -1,0 +1,35 @@
+#contenedor {
+    flex: content;
+    margin-top: 30px;
+}
+
+.imagenes-detalle {
+    -webkit-box-shadow: -3px 6px 32px 4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -3px 6px 32px 4px rgba(0, 0, 0, 0.75);
+    box-shadow: -3px 6px 32px 4px rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.botones-finales {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.galeria {
+    margin-top: 30px;
+}
+
+.carrusel {
+    margin-top: 30px;
+}
+
+.imagenes img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
