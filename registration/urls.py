@@ -8,4 +8,5 @@ urlpatterns = [
     path('custom-login/', custom_login, name='custom_login'),
     path('custom-register/', custom_register, name='custom_register'),
     path('logout/', logout_view, name='logout'),
+    path('custom-change-password/', custom_change_password, name='change_password'),
 ]

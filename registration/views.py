@@ -33,6 +33,19 @@ def custom_register(request):
                 context.update({"message": f'Usuario {email} ya existe, inicie sesión'})
     return render(request, 'registration/custom_register.html', context)
 
+def custom_change_password(request):
+    context = {}
+    if request.method == "POST":
+        password = request.POST.get("password")
+        password2 = request.POST.get("password")
+        if password == password2:
+            request.user.set_password(password)
+            request.user.save()
+            return redirect('registration:index')
+        else:
+            context.update({"message": f'Las contraseñas no coinciden'})
+
+    return render(request, 'registration/custom_change_password.html', context)
 def logout_view(request):
     logout(request)
     return redirect('registration:index')
