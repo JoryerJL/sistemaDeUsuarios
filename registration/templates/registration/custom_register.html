@@ -2,19 +2,18 @@
 {% block content %}
 <div class="row">
     <div class="col-4">
-        <h1>Iniciar Sesión</h1>
-        {% if error %}
+        <h1>Registro</h1>
+        {% if message %}
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            {{ error }}
+            {{ message }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         {% endif %}
         <form action="" method="post">
             {% csrf_token %}
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Usuario</label>
-                <input type="text" name="username" class="form-control" id="exampleInputEmail1"
-                       aria-describedby="emailHelp">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
             </div>
             <div class="row g-3 align-items-center">
                 <div class="col-auto">
@@ -32,7 +31,9 @@
             </div>
             <br>
             <div class="form-group">
-                <button class="btn btn-outline-success" type="Iniciar Sesion"><i class="fa-solid fa-circle-check"></i> Iniciar Sesión</button>
+                <button class="btn btn-outline-success" type="Iniciar Sesion"><i class="fa-solid fa-circle-check"></i>
+                    Crear Cuenta
+                </button>
             </div>
         </form>
     </div>

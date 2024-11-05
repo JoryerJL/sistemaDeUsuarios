@@ -1,6 +1,7 @@
 from lib2to3.fixes.fix_input import context
 
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -20,6 +21,16 @@ def custom_login(request):
 
 def custom_register(request):
     context = {}
+    if request.method == "POST":
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+        if email and password:
+            try:
+                usuario = User.objects.create_user(username=email, email=email, password=password)
+                login(request, usuario)
+                context.update({"message": f'Usuario {usuario.username} creado exitosamente'})
+            except Exception as e:
+                context.update({"message": f'Usuario {email} ya existe, inicie sesión'})
     return render(request, 'registration/custom_register.html', context)
 
 def logout_view(request):
