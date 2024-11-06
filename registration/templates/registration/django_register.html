@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-4">
+        <h1>Registrarse-Django</h1>
+        <form method="post">
+            {% csrf_token %}
+            <table class="table">
+                {{ form.as_table }}
+            </table>
+
+            <button type="submit" class="btn btn-outline-success">Registrarse</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

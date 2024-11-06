@@ -1,6 +1,7 @@
 from lib2to3.fixes.fix_input import context
 
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
@@ -49,5 +50,19 @@ def custom_change_password(request):
 def logout_view(request):
     logout(request)
     return redirect('registration:index')
+
+def django_register(request):
+    form = UserCreationForm()
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('registration:index')
+        else:
+            print(form.errors)
+    context = {
+        'form': form
+    }
+    return render(request, 'registration/django_register.html', context)
 def index(request):
     return render(request, 'registration/index.html')
