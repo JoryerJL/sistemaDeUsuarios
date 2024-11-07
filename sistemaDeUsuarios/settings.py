@@ -137,3 +137,10 @@ LOGIN_REDIRECT_URL = 'registration:index'
 LOGIN_URL = 'login'
 LOGOUT_REDIRECT_URL = 'registration:index'
 
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_HOST = ''
+EMAIL_PORT = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = ''
+EMAIL_USE_SSL = ''

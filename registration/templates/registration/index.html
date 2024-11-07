@@ -2,12 +2,12 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-4">
+    <div class="col-6">
         <h1>Bienvenido {{ request.user }}</h1>
         {% if request.user.is_authenticated %}
         <div class="row">
             <div class="col-4">
-                <a class="btn btn-outline-warning" href="{% url 'registration:change_password' %}"><i
+                <a class="btn btn-outline-warning" href="{% url 'password_change' %}"><i
                         class="fa-solid fa-key"></i>
                     Cambiar Contraseña</a>
                 <a class="btn btn-outline-danger" href="{% url 'registration:logout_view' %}"><i
@@ -30,6 +30,8 @@
             </div>
         </div>
         {% else %}
+        <hr>
+        <br>
         <h2>Django</h2>
         <a class="btn btn-outline-success" href="{% url 'registration:django_login' %}"><i class="fa-solid fa-user"></i>
             Iniciar Sesión</a>
