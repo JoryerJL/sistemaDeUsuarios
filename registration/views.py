@@ -1,7 +1,7 @@
 from lib2to3.fixes.fix_input import context
 
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
@@ -64,5 +64,20 @@ def django_register(request):
         'form': form
     }
     return render(request, 'registration/django_register.html', context)
+
+def django_login(request):
+    context = {}
+    form = AuthenticationForm()
+    if request.method == "POST":
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect('registration:index')
+        else:
+            context.update({"error": "Usuario o contraseña incorrectos"})
+
+    context.update({"form": form})
+    return render(request, 'registration/django_login.html', context)
 def index(request):
     return render(request, 'registration/index.html')

@@ -1,11 +1,11 @@
-{% extends "base.html" %}
+{% extends "baseb5.html" %}
 {% block content %}
 <div class="row">
     <div class="col-4">
         <h1>Registro</h1>
-        {% if message %}
+        {% if error %}
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            {{ message }}
+            {{ error }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         {% endif %}
